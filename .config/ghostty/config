@@ -1,9 +1,30 @@
+# Drop down terminal
 quick-terminal-position = center
 quick-terminal-screen = mouse
-font-size = 16
-theme = tokyonight-storm
-background-opacity = 0.8
+keybind = global:shift+f12=toggle_quick_terminal
+
+# Font Settings
+font-size = 15
+font-family = JetBrainsMono Nerd Font Mono
+font-thicken = true
+bold-is-bright = true
+
+# Look and feel
+window-colorspace = display-p3
+theme = catppuccin-macchiato
+#background-opacity = 0.8
 background-blur-radius = 20
+
+# MacOS settings
 macos-option-as-alt = true
+macos-titlebar-style = transparent
+macos-titlebar-proxy-icon = hidden
+
+# Updater
 auto-update-channel = tip
-keybind = global:f12=toggle_quick_terminal
+
+# Cursor
+cursor-invert-fg-bg = true
+cursor-style-blink = true
+
+
