@@ -16,6 +16,37 @@ function y
     rm -f -- "$tmp"
 end
 
+function brew
+    # Call the original brew command
+    command brew $argv
+
+    # Check if the command is install or uninstall
+    if contains -- $argv[1] install uninstall remove
+        # Generate leaves list
+        set -l dotfiles_dir "$HOME/dotfiles"
+
+        # Ensure dotfiles directory exists
+        mkdir -p $dotfiles_dir
+
+        # Write only leaves to brewpackages.txt
+        command brew leaves >"$dotfiles_dir/brewpackages.txt"
+    end
+end
+
+function brewrestore
+    # Restore Homebrew leaves from text file
+    set -l dotfiles_dir "$HOME/dotfiles"
+
+    if test -f "$dotfiles_dir/brewpackages.txt"
+        # Read leaves from file and install
+        xargs brew install <"$dotfiles_dir/brewpackages.txt"
+        echo "Homebrew leaves restored from $dotfiles_dir/brewpackages.txt"
+    else
+        echo "No brewpackages.txt found in $dotfiles_dir"
+    end
+end
+
+
 if status is-interactive
     # It has issues!
     # set fish_tmux_autostart true
