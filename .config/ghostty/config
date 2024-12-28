@@ -1,0 +1,9 @@
+quick-terminal-position = center
+quick-terminal-screen = mouse
+font-size = 16
+theme = tokyonight-storm
+background-opacity = 0.8
+background-blur-radius = 20
+macos-option-as-alt = true
+auto-update-channel = tip
+keybind = global:f12=toggle_quick_terminal
