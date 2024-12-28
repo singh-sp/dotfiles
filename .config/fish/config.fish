@@ -8,8 +8,10 @@ pyenv init - fish | source
 
 # Shortcut to dotfiles
 function dotfiles
+    set cwd (pwd)
     cd ~/dotfiles
-    $EDITOR .
+    $EDITOR . -c "lua Snacks.lazygit({cwd = LazyVim.root.git()})"
+    cd $cwd
 end
 
 # Yazi File Browser
