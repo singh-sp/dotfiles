@@ -45,8 +45,8 @@ case "$LAPTOP-$MONITOR" in
   BOTTOM_PADDING=300
   ;;
 "home_laptop-home_monitor")
-  TOP_PADDING=200
-  BOTTOM_PADDING=300
+  TOP_PADDING=100
+  BOTTOM_PADDING=200
   ;;
 *)
   # Default settings if the combination is not recognized

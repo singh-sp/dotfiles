@@ -6,6 +6,12 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 pyenv init - fish | source
 
+# Shortcut to dotfiles
+function dotfiles
+    cd ~/dotfiles
+    $EDITOR .
+end
+
 # Yazi File Browser
 function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
@@ -16,6 +22,7 @@ function y
     rm -f -- "$tmp"
 end
 
+# Brew functions
 function brew
     # Call the original brew command
     command brew $argv
