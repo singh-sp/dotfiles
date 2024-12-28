@@ -1,6 +1,6 @@
 # Help
 
-## Copy new files
+## Copy new directory
 
 ```bash
 cp -R ~/.config/tmux ~/dotfiles/.config/
@@ -10,4 +10,10 @@ cp -R ~/.config/tmux ~/dotfiles/.config/
 
 ```bash
 stow --adopt .
+```
+
+## Debug Stow
+
+```bash
+stow --adopt --simulate -v .
 ```
