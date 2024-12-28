@@ -1,8 +1,9 @@
 # Help
 
 ## Copy new files
+
 ```bash
-cp -r ~/.config/tmux ~/dotfiles/.config/
+cp -R ~/.config/tmux ~/dotfiles/.config/
 ```
 
 ## Stow them
