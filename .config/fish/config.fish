@@ -1,7 +1,3 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 pyenv init - fish | source
@@ -11,6 +7,14 @@ function dotfiles
     set cwd (pwd)
     cd ~/dotfiles
     $EDITOR . -c "lua Snacks.lazygit({cwd = LazyVim.root.git()})"
+    cd $cwd
+end
+
+# Shortcut to dotfiles
+function fishconfig
+    set cwd (pwd)
+    cd ~/.config/fish
+    $EDITOR .
     cd $cwd
 end
 
