@@ -57,7 +57,6 @@ end
 
 
 if status is-interactive
-    # It has issues!
-    # set fish_tmux_autostart true
-    # set fish_tmux_autoconnect false
+    set fish_tmux_autostart true
+    set fish_tmux_autoconnect false
 end
