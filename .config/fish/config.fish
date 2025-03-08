@@ -6,7 +6,8 @@ pyenv init - fish | source
 function dotfiles
     set cwd (pwd)
     cd ~/dotfiles
-    $EDITOR . -c "lua Snacks.lazygit({cwd = LazyVim.root.git()})"
+    lazygit
+    # $EDITOR . -c "lua Snacks.lazygit({cwd = LazyVim.root.git()})"
     cd $cwd
 end
 
